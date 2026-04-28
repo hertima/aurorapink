@@ -87,19 +87,12 @@ function TiltCard({ p, index }: { p: Pacote; index: number }) {
         </motion.div>
       )}
 
-      <div className="absolute top-4 right-4 flex flex-col items-end gap-2 z-10">
+      <div className="absolute top-4 right-4 z-10">
         <span
           className="inline-flex items-center justify-center text-[11px] font-bold bg-primary text-primary-foreground rounded-full w-12 h-12 shadow-md"
           style={{ transform: "translateZ(30px)" }}
         >
           -{desconto}%
-        </span>
-        <span
-          className="inline-flex items-center gap-1 text-[10px] font-bold bg-emerald-500 text-white rounded-full px-2.5 py-1 shadow-md uppercase tracking-wider"
-          style={{ transform: "translateZ(30px)" }}
-          aria-label="Frete grátis"
-        >
-          🚚 Frete Grátis
         </span>
       </div>
 

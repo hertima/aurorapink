@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Magnetic } from "@/components/magnetic";
 
 export function FinalCTA() {
   return (
@@ -43,26 +42,25 @@ export function FinalCTA() {
               Em 30 dias você pode estar com a pele que sempre quis. Garantia
               total — se não amar, devolvemos seu dinheiro.
             </p>
-            <div className="mt-8 inline-block">
-              <Magnetic strength={0.3}>
-                <motion.div
-                  animate={{ scale: [1, 1.04, 1] }}
-                  transition={{
-                    duration: 2.4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
+            <div className="mt-8 max-w-md mx-auto">
+              <motion.div
+                animate={{ scale: [1, 1.04, 1] }}
+                transition={{
+                  duration: 2.4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <Button
+                  nativeButton={false}
+                  size="lg"
+                  className="w-full rounded-full bg-white text-primary hover:bg-white/95 h-14 px-6 text-base font-semibold tracking-wide shadow-2xl inline-flex items-center justify-center gap-3"
+                  render={<a href="#pacotes" />}
                 >
-                  <Button
-                    nativeButton={false}
-                    size="lg"
-                    className="rounded-full bg-white text-primary hover:bg-white/95 h-14 px-8 text-base font-semibold tracking-wide shadow-2xl"
-                    render={<a href="#pacotes" />}
-                  >
-                    CLAREAR MINHA PELE AGORA →
-                  </Button>
-                </motion.div>
-              </Magnetic>
+                  <span>CLAREAR MINHA PELE AGORA</span>
+                  <span aria-hidden>→</span>
+                </Button>
+              </motion.div>
             </div>
             <p className="mt-5 text-xs text-white/70">
               🛡️ Garantia 30 dias · 🚚 Frete grátis no kit 3 meses · 📱 App Glow

@@ -16,33 +16,31 @@ export function Guarantee() {
           <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-primary/15 blur-3xl" />
           <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-primary/10 blur-3xl" />
 
-          <div className="absolute top-4 right-4 md:top-6 md:right-6 z-10">
-            <div className="relative w-32 h-32 md:w-44 md:h-44">
-              <div className="absolute inset-0 rounded-full bg-primary text-primary-foreground flex flex-col items-center justify-center shadow-2xl ring-4 ring-white/50">
-                <span className="text-xs md:text-sm font-bold uppercase tracking-widest leading-tight">
-                  Garantia
-                </span>
-                <span className="font-heading text-3xl md:text-5xl font-bold leading-none my-1">
-                  30
-                </span>
-                <span className="text-xs md:text-sm font-bold uppercase tracking-widest">
-                  dias
-                </span>
-              </div>
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                className="absolute -inset-2 rounded-full border-2 border-dashed border-primary/50"
-              />
-              <motion.div
-                animate={{ rotate: -360 }}
-                transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
-                className="absolute -inset-4 rounded-full border border-dashed border-primary/30"
-              />
+          <div className="relative md:absolute md:top-6 md:right-6 z-10 mx-auto mb-6 md:mb-0 w-32 h-32 md:w-44 md:h-44">
+            <div className="absolute inset-0 rounded-full bg-primary text-primary-foreground flex flex-col items-center justify-center shadow-2xl ring-4 ring-white/50">
+              <span className="text-xs md:text-sm font-bold uppercase tracking-widest leading-tight">
+                Garantia
+              </span>
+              <span className="font-heading text-3xl md:text-5xl font-bold leading-none my-1">
+                30
+              </span>
+              <span className="text-xs md:text-sm font-bold uppercase tracking-widest">
+                dias
+              </span>
             </div>
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+              className="absolute -inset-2 rounded-full border-2 border-dashed border-primary/50"
+            />
+            <motion.div
+              animate={{ rotate: -360 }}
+              transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+              className="absolute -inset-4 rounded-full border border-dashed border-primary/30"
+            />
           </div>
 
-          <div className="relative max-w-xl pr-0 md:pr-48">
+          <div className="relative max-w-xl text-center md:text-left pr-0 md:pr-48">
             <p className="text-primary font-medium text-sm tracking-widest uppercase mb-3">
               Garantia &ldquo;Pele de Seda&rdquo;
             </p>

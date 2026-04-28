@@ -1,9 +1,19 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { WHATSAPP } from "@/lib/checkouts";
 
 export function WhatsAppButton() {
+  const [raised, setRaised] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setRaised(window.scrollY > 600);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <motion.a
       href={WHATSAPP}
@@ -15,7 +25,9 @@ export function WhatsAppButton() {
       transition={{ delay: 1.2, type: "spring", stiffness: 220, damping: 16 }}
       whileHover={{ scale: 1.08 }}
       whileTap={{ scale: 0.95 }}
-      className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-500 text-white shadow-[0_8px_28px_-6px_rgba(16,185,129,0.6)] hover:bg-emerald-600 transition-colors"
+      className={`fixed right-5 md:right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-500 text-white shadow-[0_8px_28px_-6px_rgba(16,185,129,0.6)] hover:bg-emerald-600 transition-[bottom,background-color] duration-300 ${
+        raised ? "bottom-24 md:bottom-6" : "bottom-5 md:bottom-6"
+      }`}
     >
       <span
         className="absolute inset-0 rounded-full bg-emerald-500 opacity-60 animate-ping"
