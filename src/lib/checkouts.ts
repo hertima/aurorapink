@@ -85,5 +85,5 @@ export const CTA_PADRAO = PACOTES[2].checkout;
 
 const WHATSAPP_PHONE = "5564996275059";
 const WHATSAPP_MESSAGE =
-  "Olá! Vim do site Aurora Pink e quero saber mais sobre o Tratamento Glow 360.";
+  "Oi! 💕 Vim do site Aurora Pink ✨ e quero saber mais sobre o Tratamento Glow 360 🌸";
 export const WHATSAPP = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
